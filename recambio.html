@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powder From Stars</title>
+    <link rel="stylesheet" href="recambio.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button type="submit" class="search-button">Buscar</button>
+        </form>
+        <div class="icon-container">
+            <button class="icon-button">
+                <img src="icono1.png" alt="Icono 1" class="icon">
+                <img src="icono2.png" alt="Icono 2" class="icon">
+            </button>
+        </div>
+    </header>
+    <div class="header-categories">
+        <a href="index.html" class="category-link">Inicio</a> *
+        <a href="categorias.html" class="category-link">Categorías</a> *
+        <a href="blog.html" class="category-link">Blog</a> *
+        <a href="recambio.html" class="category-link"><strong>Recambio</strong></a>
+    </div>
+    <div class="centered-image-container">
+        <img src="cambiaqui.png" alt="Imagen Centrada" class="centered-image">
+    </div>
+    <div class="centered-image-container">
+        <img src="recambio.png" alt="Imagen Centrada" class="centered-image">
+    </div>
+
+    <div class="image-grid">
+        <div class="image-item">
+            <img src="cambio1.png" alt="cambio1">
+            <button class="dropdown-button" onclick="toggleMenu(this)">CAMBIO</button>
+            <ul class="dropdown-menu">
+                <li>Información</li>
+                <li>Iniciar cambio</li>
+                <li>Disponibles</li>
+            </ul>
+        </div>
+        <div class="image-item">
+            <img src="cambio2.png" alt="cambio2">
+            <button class="dropdown-button" onclick="toggleMenu(this)">CAMBIO</button>
+            <ul class="dropdown-menu">
+                <li>Información</li>
+                <li>Iniciar cambio</li>
+                <li>Disponibles</li>
+            </ul>
+        </div>
+        <div class="image-item">
+            <img src="cambio3.png" alt="cambio3">
+            <button class="dropdown-button" onclick="toggleMenu(this)">CAMBIO</button>
+            <ul class="dropdown-menu">
+                <li>Información</li>
+                <li>Iniciar cambio</li>
+                <li>Disponibles</li>
+            </ul>
+        </div>
+        <div class="image-item">
+            <img src="cambio4.png" alt="cambio4">
+            <button class="dropdown-button" onclick="toggleMenu(this)">CAMBIO</button>
+            <ul class="dropdown-menu">
+                <li>Información</li>
+                <li>Iniciar cambio</li>
+                <li>Disponibles</li>
+            </ul>
+        </div>
+        <div class="image-item">
+            <img src="cambio5.png" alt="cambio5">
+            <button class="dropdown-button" onclick="toggleMenu(this)">CAMBIO</button>
+            <ul class="dropdown-menu">
+                <li>Información</li>
+                <li>Iniciar cambio</li>
+                <li>Disponibles</li>
+            </ul>
+        </div>
+        <div class="image-item">
+            <img src="cambio6.png" alt="cambio6">
+            <button class="dropdown-button" onclick="toggleMenu(this)">CAMBIO</button>
+            <ul class="dropdown-menu">
+                <li>Información</li>
+                <li>Iniciar cambio</li>
+                <li>Disponibles</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <img src="redes.png" alt="Redes Sociales" class="social-media-icon">
+            <button class="atencion-cliente-button">
+                <img src="atencion.png" alt="Atención al Cliente" class="atencion-cliente-icon">
+            </button>
+        </div>
+        <div class="footer-content">
+            <p class="footer-legal">Términos Legales | Copyright</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu(button) {
+            const menu = button.nextElementSibling;
+            menu.classList.toggle('show');
+        }
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(menu => {
+                if (!menu.contains(event.target) && !menu.previousElementSibling.contains(event.target)) {
+                    menu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
